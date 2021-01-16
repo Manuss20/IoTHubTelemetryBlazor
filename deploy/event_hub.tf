@@ -1,14 +1,14 @@
 # Create an Azure Event Hubs
 
 resource "azurerm_eventhub_namespace" "evhubiotnmspace" {
-  name                = "evhubiot"
+  name                = var.event_hub_name_space
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
   sku                 = "Basic"
 }
 
 resource "azurerm_eventhub" "evhubiot" {
-  name                = "example-eventhub"
+  name                = var.event_hub_name
   resource_group_name = azurerm_resource_group.rg.name
   namespace_name      = azurerm_eventhub_namespace.evhubiotnmspace.name
   partition_count     = 2
