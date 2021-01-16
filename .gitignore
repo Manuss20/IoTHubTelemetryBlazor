@@ -442,6 +442,7 @@ bld/
 *.tfplan
 *.tfvars
 *.tfvars.json
+*.terraform.lock.hcl
 
 # Azure CLI
 *.azureauth
