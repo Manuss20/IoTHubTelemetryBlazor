@@ -1,0 +1,11 @@
+docker/
+.github/
+*.terraform
+*.tfplan
+*.tfstate
+*.tfstate.backup
+bin/Debug/
+deploy/
+docs/
+**/obj/
+**/.terraform/
